@@ -163,7 +163,6 @@ namespace RomanConverter.UnitTests
             // Assert
             foreach (var inp in inputs)
                 Assert.Throws<ArgumentException>(() => sut.Convert(inp));
-
         }
     }
 }
