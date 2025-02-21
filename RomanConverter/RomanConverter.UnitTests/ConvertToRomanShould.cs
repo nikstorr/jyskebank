@@ -5,7 +5,6 @@ namespace RomanConverter.UnitTests
 {
     public class ConvertToRomanShould
     {
-
         [Theory]
         [InlineData(3000, "MMM")]
         [InlineData(1999, "MCMXCIX")]
@@ -21,8 +20,5 @@ namespace RomanConverter.UnitTests
             // Assert
             Assert.True(result == expected);
         }
-
-
-
     }
 }
