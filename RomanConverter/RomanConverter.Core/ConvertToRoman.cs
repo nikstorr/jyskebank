@@ -10,6 +10,9 @@
 
         public string Convert(int input) 
         {
+            if (input <= 0)
+                throw new ArgumentException("zero and negative numbers can not be converted to roman numerals");
+
             return ConvertArabicToRoman(input);
         }
 

@@ -20,5 +20,14 @@ namespace RomanConverter.UnitTests
             // Assert
             Assert.True(result == expected);
         }
+
+        [Fact]
+        public void HandleNonsenseInput()
+        {
+            var sut = new ConvertToRoman();
+
+            Assert.Throws<ArgumentException>(() => sut.Convert(-451));
+            Assert.Throws<ArgumentException>(() => sut.Convert(0));
+        }
     }
 }
