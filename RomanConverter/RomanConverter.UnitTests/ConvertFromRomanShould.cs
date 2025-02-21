@@ -150,5 +150,20 @@ namespace RomanConverter.UnitTests
             foreach (var inp in inputs)
                 Assert.Throws<ArgumentException>(() => sut.Convert(inp));
         }
+
+        [Fact]
+        public void HandleNonsenseInput()
+        {
+            // Arrange
+            var sut = new ConvertFromRoman();
+
+            var inputs = new string[] { "HG", "", "#%IVD", "-%&"};
+
+            // Act
+            // Assert
+            foreach (var inp in inputs)
+                Assert.Throws<ArgumentException>(() => sut.Convert(inp));
+
+        }
     }
 }
