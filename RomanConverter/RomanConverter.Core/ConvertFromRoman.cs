@@ -11,7 +11,7 @@
         {
             ValidateInputString(input);
 
-            if (!HasSingleNumeralBeforeLargerNumerals(input))
+            if (!HasSingleSmallerNumeralBeforeLargerNumerals(input))
                 throw new ArgumentException("input contains several smaller numerals before larger ones");
 
             if (!Only_I_X_C_AppearBeforeBiggerNumerals(input))
@@ -55,7 +55,7 @@
                     throw new ArgumentException($"input contains non-roman numeral: {s}");
         }
 
-        private bool HasSingleNumeralBeforeLargerNumerals(string input)
+        private bool HasSingleSmallerNumeralBeforeLargerNumerals(string input)
         {
             int i = 0;
             while (input.Length >= 3 && input.Length - i >= 3)
